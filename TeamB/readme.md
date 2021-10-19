@@ -104,5 +104,5 @@ from datetime
 import datetime
 ```
 
-To run the Forever Process: 
+# To run the process manager: 
 Install 'npm install pm2 -g' in console. After that, switch directories to where file is located. Then type pick your script name and type in 'pm2 start <scriptname.py>'. 
