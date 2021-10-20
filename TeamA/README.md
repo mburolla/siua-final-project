@@ -1,10 +1,7 @@
 # SIUA: Final Project
 #This is where we are documenting our solution, if a new member came to the team this is how they would get up to speed.
 
-Noah Whale
-Clark Cohen
-Suzy Waterford
-Kelly Simpson
+
 
 
 #UIM (User Input Module)
