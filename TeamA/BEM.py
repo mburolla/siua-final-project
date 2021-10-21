@@ -131,8 +131,11 @@ def main():
     quantity_list = quantityData()
     final_CL = newCustomerList(multiplied_list, id_list, user_list, quantity_list)
     billableCustomersList = final_CL
-    createFileS3(list = billableCustomersList, fileHeader = '*** BILLABLE CUSTOMERS ***', bucketName = 'siua-billable-customers', keyPath ='TeamA/billable_customers.txt')
-    
+    with open('BEMtext.txt', 'w') as f:
+      for person in billableCustomersList:
+        f.write(person)
+        f.write('\n')
+    createFileS3(list = billableCustomersList, fileHeader = '*** BILLABLE CUSTOMERS ***', bucketName = 'siua-billable-customers', keyPath ='TeamA/billable_customers.txt') 
     timestamp = datetime.today().strftime('%m/%d/%Y %I:%M:%S %p')
     print(f'\nLast run: {timestamp}.\nThis is also running FOREVER. Check and kill our pid# for verification.')
     sleep(INTERVAL_SECONDS)
